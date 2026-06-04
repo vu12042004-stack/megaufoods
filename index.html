@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEGAUFOODS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">MEGAUFOODS</div>
+  <nav>
+    <a href="#">Trang chủ</a>
+    <a href="#products">Sản phẩm</a>
+    <a href="#cart">Giỏ hàng</a>
+  </nav>
+</header>
+
+<section class="slider">
+  <div class="slide active">
+    <h1>Thịt bò Canada nhập khẩu</h1>
+    <p>Chuẩn steakhouse, tươi ngon, chất lượng cao</p>
+  </div>
+  <div class="slide">
+    <h1>Cá hồi Na Uy cao cấp</h1>
+    <p>Phi lê, sashimi, bụng cá hồi tươi ngon</p>
+  </div>
+  <div class="slide">
+    <h1>MEGAUFOODS</h1>
+    <p>Thực phẩm nhập khẩu cho gia đình và nhà hàng</p>
+  </div>
+</section>
+
+<section id="products" class="main-section">
+  <aside class="sidebar">
+    <h3>Danh mục</h3>
+    <button onclick="filterCategory('all')">Tất cả</button>
+    <button onclick="filterCategory('Steak cao cấp')">Steak cao cấp</button>
+    <button onclick="filterCategory('BBQ')">BBQ</button>
+    <button onclick="filterCategory('Lẩu')">Lẩu</button>
+    <button onclick="filterCategory('Cá hồi nhập khẩu')">Cá hồi</button>
+  </aside>
+
+  <div class="content">
+    <h2>Sản phẩm nổi bật</h2>
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Tìm kiếm sản phẩm..." 
+      onkeyup="searchProducts()"
+    >
+    <div class="product-list" id="productList"></div>
+  </div>
+</section>
+
+<section id="cart" class="section">
+  <h2>Giỏ hàng</h2>
+  <div id="cartItems"></div>
+  <h3 id="total">Tổng tiền: 0đ</h3>
+  <button onclick="checkout()" class="checkout-btn">Thanh toán</button>
+</section>
+
+<div id="productModal" class="modal">
+  <div class="modal-content">
+    <span onclick="closeModal()" class="close">&times;</span>
+    <img id="modalImage" src="">
+    <h2 id="modalName"></h2>
+    <p id="modalCategory"></p>
+    <p id="modalUnit"></p>
+    <h3 id="modalPrice"></h3>
+    <button id="modalAddBtn">Thêm vào giỏ</button>
+  </div>
+</div>
+
+<div class="floating-contact">
+  <a href="https://zalo.me/0123456789" target="_blank">Zalo</a>
+  <a href="https://facebook.com" target="_blank">Facebook</a>
+</div>
+
+<footer>
+  <p>© 2026 MEGAUFOODS - Thịt bò & cá hồi nhập khẩu</p>
+</footer>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
