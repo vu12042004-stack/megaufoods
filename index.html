@@ -3,68 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEGAUFOODS</title>
+  <title>MEGAUFOODS - Thịt bò & Cá hồi nhập khẩu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
+<header class="header">
   <div class="logo">MEGAUFOODS</div>
   <nav>
-    <a href="#">Trang chủ</a>
+    <a href="#home">Trang chủ</a>
     <a href="#products">Sản phẩm</a>
+    <a href="#about">Giới thiệu</a>
     <a href="#cart">Giỏ hàng</a>
   </nav>
 </header>
 
-<section class="slider">
-  <div class="slide active">
-    <h1>Thịt bò Canada nhập khẩu</h1>
-    <p>Chuẩn steakhouse, tươi ngon, chất lượng cao</p>
-  </div>
-  <div class="slide">
-    <h1>Cá hồi Na Uy cao cấp</h1>
-    <p>Phi lê, sashimi, bụng cá hồi tươi ngon</p>
-  </div>
-  <div class="slide">
-    <h1>MEGAUFOODS</h1>
-    <p>Thực phẩm nhập khẩu cho gia đình và nhà hàng</p>
+<section id="home" class="hero">
+  <div class="hero-content">
+    <span>Premium Imported Food</span>
+    <h1>Thịt bò Canada & Cá hồi Na Uy nhập khẩu</h1>
+    <p>Chuyên cung cấp thực phẩm cao cấp, chuẩn nhà hàng, giao hàng tận nơi.</p>
+    <a href="#products" class="primary-btn">Xem sản phẩm</a>
   </div>
 </section>
 
-<section id="products" class="main-section">
-  <aside class="sidebar">
-    <h3>Danh mục</h3>
+<section class="features">
+  <div>
+    <h3>100% nhập khẩu</h3>
+    <p>Nguồn hàng chọn lọc, rõ xuất xứ.</p>
+  </div>
+  <div>
+    <h3>Bảo quản lạnh</h3>
+    <p>Đảm bảo chất lượng khi giao hàng.</p>
+  </div>
+  <div>
+    <h3>Giao nhanh</h3>
+    <p>Hỗ trợ giao hàng trong ngày.</p>
+  </div>
+  <div>
+    <h3>Tư vấn món ăn</h3>
+    <p>Hướng dẫn chế biến steak, BBQ, lẩu.</p>
+  </div>
+</section>
+
+<section id="products" class="product-section">
+  <div class="section-title">
+    <h2>Sản phẩm nổi bật</h2>
+    <p>Thịt bò Canada, cá hồi Na Uy và các sản phẩm nhập khẩu cao cấp.</p>
+  </div>
+
+  <div class="filter-bar">
     <button onclick="filterCategory('all')">Tất cả</button>
     <button onclick="filterCategory('Steak cao cấp')">Steak cao cấp</button>
     <button onclick="filterCategory('BBQ')">BBQ</button>
     <button onclick="filterCategory('Lẩu')">Lẩu</button>
     <button onclick="filterCategory('Cá hồi nhập khẩu')">Cá hồi</button>
-  </aside>
+  </div>
 
-  <div class="content">
-    <h2>Sản phẩm nổi bật</h2>
-    <input 
-      type="text" 
-      id="searchInput" 
-      placeholder="Tìm kiếm sản phẩm..." 
-      onkeyup="searchProducts()"
-    >
-    <div class="product-list" id="productList"></div>
+  <input id="searchInput" onkeyup="searchProducts()" placeholder="Tìm kiếm sản phẩm...">
+
+  <div id="productList" class="product-list"></div>
+</section>
+
+<section id="about" class="about">
+  <div>
+    <h2>Về MEGAUFOODS</h2>
+    <p>
+      MEGAUFOODS chuyên cung cấp thịt bò Canada, cá hồi Na Uy và thực phẩm nhập khẩu
+      chất lượng cao cho gia đình, nhà hàng, quán BBQ và các bữa tiệc cao cấp.
+    </p>
+    <p>
+      Chúng tôi tập trung vào chất lượng sản phẩm, bảo quản đúng chuẩn và dịch vụ tư vấn tận tâm.
+    </p>
   </div>
 </section>
 
-<section id="cart" class="section">
+<section id="cart" class="cart-section">
   <h2>Giỏ hàng</h2>
   <div id="cartItems"></div>
   <h3 id="total">Tổng tiền: 0đ</h3>
-  <button onclick="checkout()" class="checkout-btn">Thanh toán</button>
+  <button onclick="checkout()" class="checkout-btn">Đặt hàng ngay</button>
 </section>
 
 <div id="productModal" class="modal">
   <div class="modal-content">
     <span onclick="closeModal()" class="close">&times;</span>
-    <img id="modalImage" src="">
+    <img id="modalImage">
     <h2 id="modalName"></h2>
     <p id="modalCategory"></p>
     <p id="modalUnit"></p>
@@ -79,7 +103,9 @@
 </div>
 
 <footer>
-  <p>© 2026 MEGAUFOODS - Thịt bò & cá hồi nhập khẩu</p>
+  <h3>MEGAUFOODS</h3>
+  <p>Thịt bò Canada & Cá hồi Na Uy nhập khẩu</p>
+  <p>Hotline: 0123 456 789 | Email: megaufoods@gmail.com</p>
 </footer>
 
 <script src="products.js"></script>
