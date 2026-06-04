@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin MEGAUFOODS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">MEGAUFOODS ADMIN</div>
+  <nav>
+    <a href="index.html">Về website</a>
+  </nav>
+</header>
+
+<section class="admin-section">
+  <h1>Quản lý sản phẩm</h1>
+
+  <div class="admin-form">
+    <input id="productId" type="hidden">
+
+    <input id="adminName" placeholder="Tên sản phẩm">
+    <input id="adminCategory" placeholder="Danh mục: Steak cao cấp / BBQ / Lẩu / Cá hồi nhập khẩu">
+    <input id="adminOrigin" placeholder="Xuất xứ">
+    <input id="adminUnit" placeholder="Quy cách">
+    <input id="adminPrice" type="number" placeholder="Giá">
+    <input id="adminImage" placeholder="Link ảnh sản phẩm">
+    <textarea id="adminDesc" placeholder="Mô tả sản phẩm"></textarea>
+
+    <button onclick="saveProduct()">Lưu sản phẩm</button>
+    <button onclick="resetForm()">Làm mới</button>
+  </div>
+
+  <h2>Danh sách sản phẩm</h2>
+  <div id="adminProductList"></div>
+</section>
+
+<section class="admin-section">
+  <h1>Quản lý đơn hàng</h1>
+  <div id="orderList"></div>
+</section>
+
+<script src="products.js"></script>
+<script src="admin.js"></script>
+</body>
+</html>

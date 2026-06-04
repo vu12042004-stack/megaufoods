@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEGAUFOODS - Thịt bò & Cá hồi nhập khẩu</title>
+  <title>MEGAUFOODS - Thực phẩm nhập khẩu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,43 +13,32 @@
   <nav>
     <a href="#home">Trang chủ</a>
     <a href="#products">Sản phẩm</a>
-    <a href="#about">Giới thiệu</a>
-    <a href="#cart">Giỏ hàng</a>
+    <a href="#policy">Chính sách</a>
+    <a href="#checkout">Thanh toán</a>
+    <a href="admin.html">Admin</a>
   </nav>
 </header>
 
 <section id="home" class="hero">
-  <div class="hero-content">
+  <div>
     <span>Premium Imported Food</span>
     <h1>Thịt bò Canada & Cá hồi Na Uy nhập khẩu</h1>
-    <p>Chuyên cung cấp thực phẩm cao cấp, chuẩn nhà hàng, giao hàng tận nơi.</p>
+    <p>Thực phẩm cao cấp, chuẩn nhà hàng, giao hàng tận nơi.</p>
     <a href="#products" class="primary-btn">Xem sản phẩm</a>
   </div>
 </section>
 
 <section class="features">
-  <div>
-    <h3>100% nhập khẩu</h3>
-    <p>Nguồn hàng chọn lọc, rõ xuất xứ.</p>
-  </div>
-  <div>
-    <h3>Bảo quản lạnh</h3>
-    <p>Đảm bảo chất lượng khi giao hàng.</p>
-  </div>
-  <div>
-    <h3>Giao nhanh</h3>
-    <p>Hỗ trợ giao hàng trong ngày.</p>
-  </div>
-  <div>
-    <h3>Tư vấn món ăn</h3>
-    <p>Hướng dẫn chế biến steak, BBQ, lẩu.</p>
-  </div>
+  <div><h3>100% nhập khẩu</h3><p>Rõ nguồn gốc, chọn lọc kỹ.</p></div>
+  <div><h3>Bảo quản lạnh</h3><p>Đảm bảo chất lượng khi giao.</p></div>
+  <div><h3>Giao nhanh</h3><p>Hỗ trợ giao hàng trong ngày.</p></div>
+  <div><h3>Tư vấn món ăn</h3><p>Steak, BBQ, lẩu, sashimi.</p></div>
 </section>
 
 <section id="products" class="product-section">
   <div class="section-title">
     <h2>Sản phẩm nổi bật</h2>
-    <p>Thịt bò Canada, cá hồi Na Uy và các sản phẩm nhập khẩu cao cấp.</p>
+    <p>Thịt bò Canada, cá hồi Na Uy và thực phẩm nhập khẩu cao cấp.</p>
   </div>
 
   <div class="filter-bar">
@@ -61,28 +50,61 @@
   </div>
 
   <input id="searchInput" onkeyup="searchProducts()" placeholder="Tìm kiếm sản phẩm...">
-
   <div id="productList" class="product-list"></div>
 </section>
 
-<section id="about" class="about">
-  <div>
-    <h2>Về MEGAUFOODS</h2>
-    <p>
-      MEGAUFOODS chuyên cung cấp thịt bò Canada, cá hồi Na Uy và thực phẩm nhập khẩu
-      chất lượng cao cho gia đình, nhà hàng, quán BBQ và các bữa tiệc cao cấp.
-    </p>
-    <p>
-      Chúng tôi tập trung vào chất lượng sản phẩm, bảo quản đúng chuẩn và dịch vụ tư vấn tận tâm.
-    </p>
+<section id="checkout" class="checkout-section">
+  <div class="cart-box">
+    <h2>Giỏ hàng</h2>
+    <div id="cartItems"></div>
+    <h3 id="total">Tổng tiền: 0đ</h3>
+  </div>
+
+  <div class="payment-box">
+    <h2>Thông tin thanh toán</h2>
+
+    <input id="customerName" placeholder="Họ và tên">
+    <input id="customerPhone" placeholder="Số điện thoại">
+    <input id="customerAddress" placeholder="Địa chỉ giao hàng">
+    <textarea id="customerNote" placeholder="Ghi chú đơn hàng"></textarea>
+
+    <h3>Phương thức thanh toán</h3>
+
+    <label><input type="radio" name="payment" value="COD" checked> Thanh toán khi nhận hàng</label>
+    <label><input type="radio" name="payment" value="Chuyển khoản"> Chuyển khoản ngân hàng</label>
+    <label><input type="radio" name="payment" value="QR Banking"> Quét mã QR Banking</label>
+
+    <div class="bank-info">
+      <p><b>Ngân hàng:</b> Vietcombank</p>
+      <p><b>Số tài khoản:</b> 0123456789</p>
+      <p><b>Chủ tài khoản:</b> MEGAUFOODS</p>
+      <p><b>Nội dung:</b> SĐT + tên khách hàng</p>
+    </div>
+
+    <button onclick="checkout()" class="checkout-btn">Xác nhận đặt hàng</button>
   </div>
 </section>
 
-<section id="cart" class="cart-section">
-  <h2>Giỏ hàng</h2>
-  <div id="cartItems"></div>
-  <h3 id="total">Tổng tiền: 0đ</h3>
-  <button onclick="checkout()" class="checkout-btn">Đặt hàng ngay</button>
+<section id="policy" class="policy">
+  <h2>Chính sách MEGAUFOODS</h2>
+  <div class="policy-grid">
+    <div>
+      <h3>Chính sách giao hàng</h3>
+      <p>Giao hàng trong ngày tại khu vực nội thành. Sản phẩm được đóng gói lạnh khi vận chuyển.</p>
+    </div>
+    <div>
+      <h3>Chính sách đổi trả</h3>
+      <p>Hỗ trợ đổi trả nếu sản phẩm lỗi, sai đơn hoặc không đúng mô tả khi nhận hàng.</p>
+    </div>
+    <div>
+      <h3>Bảo quản sản phẩm</h3>
+      <p>Bảo quản đông từ -18°C hoặc ngăn mát 0–4°C tùy từng sản phẩm.</p>
+    </div>
+    <div>
+      <h3>Cam kết chất lượng</h3>
+      <p>Sản phẩm nhập khẩu, nguồn gốc rõ ràng, phù hợp gia đình, nhà hàng và tiệc BBQ.</p>
+    </div>
+  </div>
 </section>
 
 <div id="productModal" class="modal">
@@ -91,7 +113,9 @@
     <img id="modalImage">
     <h2 id="modalName"></h2>
     <p id="modalCategory"></p>
+    <p id="modalOrigin"></p>
     <p id="modalUnit"></p>
+    <p id="modalDesc"></p>
     <h3 id="modalPrice"></h3>
     <button id="modalAddBtn">Thêm vào giỏ</button>
   </div>
