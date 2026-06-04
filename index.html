@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MEGAUFOODS - Thực phẩm nhập khẩu</title>
+  <title>MEGAUFOODS - Thịt bò & Cá hồi nhập khẩu</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">MEGAUFOODS</div>
+  <div class="logo">MEGAU<span>FOODS</span></div>
   <nav>
     <a href="#home">Trang chủ</a>
     <a href="#products">Sản phẩm</a>
@@ -20,23 +20,39 @@
 </header>
 
 <section id="home" class="hero">
-  <div>
-    <span>Premium Imported Food</span>
+  <div class="hero-content">
+    <span class="tag">Premium Imported Food</span>
     <h1>Thịt bò Canada & Cá hồi Na Uy nhập khẩu</h1>
-    <p>Thực phẩm cao cấp, chuẩn nhà hàng, giao hàng tận nơi.</p>
-    <a href="#products" class="primary-btn">Xem sản phẩm</a>
+    <p>Thực phẩm cao cấp, chuẩn nhà hàng, giao hàng tận nơi. Phù hợp steak, BBQ, lẩu và sashimi.</p>
+    <div class="hero-actions">
+      <a href="#products" class="primary-btn">Xem sản phẩm</a>
+      <a href="#checkout" class="outline-btn">Đặt hàng ngay</a>
+    </div>
   </div>
 </section>
 
 <section class="features">
-  <div><h3>100% nhập khẩu</h3><p>Rõ nguồn gốc, chọn lọc kỹ.</p></div>
-  <div><h3>Bảo quản lạnh</h3><p>Đảm bảo chất lượng khi giao.</p></div>
-  <div><h3>Giao nhanh</h3><p>Hỗ trợ giao hàng trong ngày.</p></div>
-  <div><h3>Tư vấn món ăn</h3><p>Steak, BBQ, lẩu, sashimi.</p></div>
+  <div>
+    <h3>100% nhập khẩu</h3>
+    <p>Rõ nguồn gốc, chọn lọc kỹ.</p>
+  </div>
+  <div>
+    <h3>Bảo quản lạnh</h3>
+    <p>Đảm bảo chất lượng khi giao.</p>
+  </div>
+  <div>
+    <h3>Giao nhanh</h3>
+    <p>Hỗ trợ giao hàng trong ngày.</p>
+  </div>
+  <div>
+    <h3>Tư vấn món ăn</h3>
+    <p>Steak, BBQ, lẩu, sashimi.</p>
+  </div>
 </section>
 
 <section id="products" class="product-section">
   <div class="section-title">
+    <span>Sản phẩm MEGAUFOODS</span>
     <h2>Sản phẩm nổi bật</h2>
     <p>Thịt bò Canada, cá hồi Na Uy và thực phẩm nhập khẩu cao cấp.</p>
   </div>
@@ -50,6 +66,7 @@
   </div>
 
   <input id="searchInput" onkeyup="searchProducts()" placeholder="Tìm kiếm sản phẩm...">
+
   <div id="productList" class="product-list"></div>
 </section>
 
@@ -86,23 +103,27 @@
 </section>
 
 <section id="policy" class="policy">
-  <h2>Chính sách MEGAUFOODS</h2>
+  <div class="section-title">
+    <span>Cam kết dịch vụ</span>
+    <h2>Chính sách MEGAUFOODS</h2>
+  </div>
+
   <div class="policy-grid">
     <div>
-      <h3>Chính sách giao hàng</h3>
-      <p>Giao hàng trong ngày tại khu vực nội thành. Sản phẩm được đóng gói lạnh khi vận chuyển.</p>
+      <h3>Giao hàng</h3>
+      <p>Giao hàng trong ngày tại khu vực nội thành. Đóng gói lạnh khi vận chuyển.</p>
     </div>
     <div>
-      <h3>Chính sách đổi trả</h3>
-      <p>Hỗ trợ đổi trả nếu sản phẩm lỗi, sai đơn hoặc không đúng mô tả khi nhận hàng.</p>
+      <h3>Đổi trả</h3>
+      <p>Hỗ trợ đổi trả nếu sản phẩm lỗi, sai đơn hoặc không đúng mô tả.</p>
     </div>
     <div>
-      <h3>Bảo quản sản phẩm</h3>
+      <h3>Bảo quản</h3>
       <p>Bảo quản đông từ -18°C hoặc ngăn mát 0–4°C tùy từng sản phẩm.</p>
     </div>
     <div>
-      <h3>Cam kết chất lượng</h3>
-      <p>Sản phẩm nhập khẩu, nguồn gốc rõ ràng, phù hợp gia đình, nhà hàng và tiệc BBQ.</p>
+      <h3>Chất lượng</h3>
+      <p>Sản phẩm nhập khẩu, nguồn gốc rõ ràng, phù hợp gia đình và nhà hàng.</p>
     </div>
   </div>
 </section>
